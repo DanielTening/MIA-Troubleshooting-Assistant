@@ -1,13 +1,14 @@
 streamlit
 gdown
+torchvision
 pandas
 numpy
 scikit-learn
-sentence-transformers==2.2.2
+sentence-transformers
 joblib
 openpyxl
 torch
-transformers==4.41.2
+transformers
 deep-translator
 reportlab
 
