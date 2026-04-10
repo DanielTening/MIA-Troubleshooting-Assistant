@@ -1,0 +1,32 @@
+{
+  "danieltening": {
+    "salt": "1391a1be483f39eb5e4d2857c5dce22a",
+    "iterations": 200000,
+    "password_hash": "36f7dd7a282cfff2376c951488c15dc4bd377d8f4d4a9e80a13f6d87ce064da6"
+  },
+  "evaluator1": {
+    "salt": "f98cb1df68a897009df2243584b6b906",
+    "iterations": 200000,
+    "password_hash": "f756ebfa07d280de9b3c7cb7c2a1bd1de18d9248c193c6ca3446704ce1338bcd"
+  },
+  "evaluator2": {
+    "salt": "b4c57c72f250763794c8ad60662d86de",
+    "iterations": 200000,
+    "password_hash": "f75548bd798043230da6dfcf248f0dabdeae424070a06bf5d9a6a474abd8510b"
+  },
+  "evaluator3": {
+    "salt": "6bfd769adcb8e9f76bc59a6d73dee120",
+    "iterations": 200000,
+    "password_hash": "f7695b114e576676b796d5c0e4dfe46f9ceb48c71cdee58b00d6c06bfdfb03bf"
+  },
+  "evaluator4": {
+    "salt": "5412d6c6fee1b1750d445b4ff7fdfb19",
+    "iterations": 200000,
+    "password_hash": "b0347d236f89f8f1592d5f13d3ec64f69aaace3f37931fdb37e3b36198b7ccc7"
+  },
+  "evaluator5": {
+    "salt": "3e2d25777e73b1d0173e63d10fb82495",
+    "iterations": 200000,
+    "password_hash": "7d92aeb75fb6380fca8b8fa6e01ddd71c4ab428788855d18f29f067762512510"
+  }
+}
