@@ -549,9 +549,9 @@ T = TEXT[lang]
 users_db = load_users()
 
 st.title(T["app_title"])
-st.caption(T["app_subtitle"])
 
 if not st.session_state.authenticated:
+    st.subheader(T["login_title"])
     col1, col2 = st.columns([1, 2])
 
     with col1:
