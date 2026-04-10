@@ -54,8 +54,8 @@ FAULT_COL = "fault_class_text"
 RECORD_ID_COL = "record_id"
 TEXT = {
     "English": {
-        "app_title": "Troubleshooting Assistant",
-        "app_subtitle": "Bilingual industrial maintenance recommendation assistant",
+        "app_title": "DT Troubleshooting Assistant",
+        "app_subtitle": "Bilingual industrial troubleshooting assistant for downstream oil & gas distrubition facilities",
         "login_title": "User Login",
         "username": "Username",
         "password": "Password",
@@ -94,8 +94,8 @@ TEXT = {
         "likely_causes_note": "Causes are inferred from similar historical incidents and graph-style evidence, when available."
     },
     "Français": {
-        "app_title": "Assistant de dépannage",
-        "app_subtitle": "Assistant bilingue de recommandation en maintenance industrielle",
+        "app_title": "DT Assistant de dépannage",
+        "app_subtitle": "Assistant de dépannage bilingue pour les installations de la Station Service",
         "login_title": "Connexion utilisateur",
         "username": "Nom d'utilisateur",
         "password": "Mot de passe",
