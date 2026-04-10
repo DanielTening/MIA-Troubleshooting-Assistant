@@ -25,6 +25,7 @@ ART_DIR = "artifacts"
 SVM_PIPE_PATH = os.path.join(ART_DIR, "svm_tfidf_pipeline.joblib")
 SVM_LABELS_PATH = os.path.join(ART_DIR, "svm_label_classes.npy")
 RF_LABELS_PATH = os.path.join(ART_DIR, "rf_label_classes.npy")
+RF_PIPE_PATH = os.path.join(ART_DIR, "rf_tfidf_pipeline.joblib")
 
 GRAPH_JSON_PATH = os.path.join(ART_DIR, "train_graph_indices.json")
 RETRIEVAL_CSV_PATH = os.path.join(ART_DIR, "train_retrieval_corpus.csv")
@@ -196,8 +197,15 @@ def load_users():
 def load_embedding_model():
     return SentenceTransformer(EMB_MODEL_NAME)
 
+def download_from_gdrive(file_id, output_path):
+    if not os.path.exists(output_path):
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, output_path, quiet=False)
+
 @st.cache_resource
 def load_models():
+    download_from_gdrive(RF_FILE_ID, RF_PIPE_PATH)
     svm_pipe = joblib.load(SVM_PIPE_PATH)
     rf_pipe = joblib.load(RF_PIPE_PATH)
     svm_labels = np.load(SVM_LABELS_PATH, allow_pickle=True)
