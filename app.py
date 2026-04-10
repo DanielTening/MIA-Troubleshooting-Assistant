@@ -550,6 +550,7 @@ users_db = load_users()
 
 if not st.session_state.authenticated:
     st.title(T["app_title"])
+    st.title(T["login_title"])
     col1, col2 = st.columns([1, 2])
 
     with col1:
