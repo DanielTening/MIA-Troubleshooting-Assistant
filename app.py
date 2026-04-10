@@ -1,4 +1,5 @@
 import os
+import gdown
 import re
 import json
 import hmac
@@ -19,14 +20,23 @@ import pandas as pd
 import streamlit as st
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-ART_DIR = r"D:\Library\EIT\Courses\ME700\MIA-Thesis\streamlit_app\artifacts"
+
+ART_DIR = "artifacts"
 
 SVM_PIPE_PATH = os.path.join(ART_DIR, "svm_tfidf_pipeline.joblib")
 SVM_LABELS_PATH = os.path.join(ART_DIR, "svm_label_classes.npy")
-
-RF_PIPE_PATH = os.path.join(ART_DIR, "rf_tfidf_pipeline.joblib")
 RF_LABELS_PATH = os.path.join(ART_DIR, "rf_label_classes.npy")
 
+def download_from_gdrive(file_id, output_path):
+    if not os.path.exists(output_path):
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, output_path, quiet=False)
+
+RF_PATH = os.path.join(ART_DIR, "rf_tfidf_pipeline.joblib")
+RF_FILE_ID = "17ERcZrPGbODL2mMipshdTAtl7fXrL6Pj"
+
+download_from_gdrive(RF_FILE_ID, RF_PATH)
+rf_pipe = joblib.load(RF_PATH)
 GRAPH_JSON_PATH = os.path.join(ART_DIR, "train_graph_indices.json")
 RETRIEVAL_CSV_PATH = os.path.join(ART_DIR, "train_retrieval_corpus.csv")
 TRAIN_EMB_PATH = os.path.join(ART_DIR, "train_symptom_embeddings.npy")
