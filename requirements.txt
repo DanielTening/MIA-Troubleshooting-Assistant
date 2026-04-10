@@ -1,4 +1,5 @@
 streamlit
+gdown
 pandas
 numpy
 scikit-learn
@@ -7,6 +8,5 @@ joblib
 openpyxl
 torch
 transformers
-gdown
 deep-translator
 reportlab
