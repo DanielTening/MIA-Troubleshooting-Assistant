@@ -7,3 +7,4 @@ joblib
 openpyxl
 torch
 transformers
+gdown
