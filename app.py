@@ -549,9 +549,7 @@ T = TEXT[lang]
 users_db = load_users()
 
 st.title(T["app_title"])
-
 if not st.session_state.authenticated:
-    st.subheader(T["login_title"])
     col1, col2 = st.columns([1, 2])
 
     with col1:
@@ -573,6 +571,7 @@ if not st.session_state.authenticated:
             else "Cette application utilise un pipeline de récupération enrichi par graphe de connaissances avec appariement sémantique multilingue."
         )
     st.stop()
+
 def build_pdf_report(
     T,
     symptom_input,
