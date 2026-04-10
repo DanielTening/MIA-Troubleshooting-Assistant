@@ -8,3 +8,4 @@ openpyxl
 torch
 transformers
 gdown
+deep-translator
